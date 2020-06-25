@@ -24,5 +24,5 @@ Will give you composer commands to run to update packages to the best versions f
 
 ```bash
 composer global config repositories.twcc git git@github.com:aubreypwd/twcc.git
-composer global require aubreypwd/twcc
+composer global require aubreypwd/twcc:dev-master@dev
 ```
