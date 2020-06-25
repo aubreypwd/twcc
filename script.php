@@ -1,10 +1,19 @@
 <?php
 
-if ( is_readable( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
-	require 'vendor/autoload.php';
+use Composer\Semver\Comparator;
+
+$autoload = dirname( __FILE__ ) . '/vendor/autoload.php';
+
+if ( ! is_readable( $autoload ) ) {
+	$autoload = dirname( __FILE__ ) . '/../../../vendor/autoload.php';
+
+	if ( ! is_readable( $autoload ) ) {
+		echo "Please run composer global dumpautoload";
+		exit;
+	}
 }
 
-use Composer\Semver\Comparator;
+require_once $autoload;
 
 $subcommand = $argv[1] ?? '';
 
