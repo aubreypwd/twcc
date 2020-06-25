@@ -17,3 +17,12 @@ Will write it's findings (the best version between the left and right file) to t
 ### `commands`
 
 Will give you composer commands to run to update packages to the best versions found between the right and the left files.
+
+------------
+
+# Installation
+
+```bash
+composer global config repositories.twcc git git@github.com:aubreypwd/twcc.git
+composer global require aubreypwd/twcc
+```
