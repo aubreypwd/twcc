@@ -1,6 +1,8 @@
 <?php
 
-require "vendor/autoload.php";
+if ( is_readable( 'vendor/autoload' ) ) {
+	require 'vendor/autoload.php';
+}
 
 use Composer\Semver\Comparator;
 
