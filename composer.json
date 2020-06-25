@@ -1,0 +1,27 @@
+{
+    "name": "webdevstudios/coding-standards-support",
+    "description": "Helps with transitioning from legacy to modern coding standards at WDS\"",
+    "type": "library",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "WebDevStudios",
+            "email": "contact@webdevstudios.com"
+        },
+        {
+            "name": "Aubrey Portwood",
+            "email": "aubrey@webdevstudios.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7",
+        "composer/semver": "^3.0@dev"
+    },
+    "bin": ["bin/wdscs"],
+    "support": {
+      "issues": "https://github.com/WebDevStudios/coding-standards-support/issues",
+      "source": "https://github.com/WebDevStudios/coding-standards-support"
+    },
+    "homepage": "https://github.com/WebDevStudios/coding-standards-support"
+}
