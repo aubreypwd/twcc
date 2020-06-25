@@ -83,22 +83,22 @@ foreach ( [ 'require', 'require-dev'] as $require ) {
 			continue;
 		}
 
-		if ( 'commands' === $subcommand ) {
-			$flag = 'require-dev' === $require ? '--save-dev' : '';
+		$flag = 'require-dev' === $require ? '--save-dev' : '';
+		$package = "{$package}:{$middle_version} {$flag}";
 
-			echo "composer update {$package}:{$middle_version} {$flag}\n";
+		if ( 'commands' === $subcommand ) {
+
+			echo "composer update {$package}\n";
 			continue;
 		}
 
 		if ( 'update' === $subcommand ) {
-			echo "Updating {$update}\n";
+			$working_dir = dirname( $files['middle'] );
+
+			shell_exec( "composer --working-dir=\"{$working_dir}\" update {$package}" );
 			continue;
 		}
 
 		echo "Suggest {$update}\n";
 	}
-}
-
-if ( 'update' === $subcommand ) {
-	file_put_contents( "{$files['middle']}.new.json", json_encode( $json_files['middle'], JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES ) );
 }
