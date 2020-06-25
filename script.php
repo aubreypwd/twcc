@@ -1,6 +1,6 @@
 <?php
 
-if ( is_readable( 'vendor/autoload.php' ) ) {
+if ( is_readable( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	require 'vendor/autoload.php';
 }
 
