@@ -1,16 +1,12 @@
 {
-    "name": "webdevstudios/coding-standards-support",
-    "description": "Helps with transitioning from legacy to modern coding standards at WDS\"",
+    "name": "aubreypwd/twcc",
+    "description": "This command will compare composer.json packages in the middle file with those on the left and right and figure out which (of the left and right) have the greater version.",
     "type": "library",
     "license": "GPL2",
     "authors": [
         {
-            "name": "WebDevStudios",
-            "email": "contact@webdevstudios.com"
-        },
-        {
             "name": "Aubrey Portwood",
-            "email": "aubrey@webdevstudios.com"
+            "email": "code@aubreypwd.com"
         }
     ],
     "minimum-stability": "dev",
@@ -18,10 +14,10 @@
         "php": "^7",
         "composer/semver": "^3.0@dev"
     },
-    "bin": ["bin/wdscs"],
+    "bin": ["bin/twcc"],
     "support": {
-      "issues": "https://github.com/WebDevStudios/coding-standards-support/issues",
-      "source": "https://github.com/WebDevStudios/coding-standards-support"
+      "issues": "https://github.com/aubreypwd/twcc/issues",
+      "source": "https://github.com/aubreypwd/twcc"
     },
-    "homepage": "https://github.com/WebDevStudios/coding-standards-support"
+    "homepage": "https://github.com/aubreypwd/twcc"
 }
